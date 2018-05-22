@@ -1,0 +1,34 @@
+{
+  "name": "sra-taxii2-server-model",
+  "version": "1.0.1",
+  "description": "taxii 2.0 mongoose model for sra taxii2 ecosystem projects",
+  "main": "model-factory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model.git"
+  },
+  "keywords": [
+    "taxii",
+    "taxii2",
+    "mongoose",
+    "model",
+    "stix2",
+    "stix"
+  ],
+  "author": "Galen Fisher <galen.fisher@securityriskadvisors.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model/issues"
+  },
+  "homepage": "https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "mongoose": "^5.1.2",
+    "mongoose-aggregate-paginate-extend": "github:thebleucheese/mongoose-aggregate-paginate-extend",
+    "mongoose-paginate": "^5.0.3",
+    "uuid": "^3.2.1"
+  }
+}
