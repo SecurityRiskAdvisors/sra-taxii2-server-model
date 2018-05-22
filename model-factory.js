@@ -12,17 +12,17 @@ const path = __dirname + '/models/cross-database-schemas';
 // trying to avoid modifying the mongoose object
 
 // collection model will be in the taxii connection/model which doesn't need this factory
-const modelFactory = (apiRoot, collection) => {
+const buildTaxii2Models = async (apiRoot, collection, connectionString) => {
     // if the connection is cached on the array, reuse it
     if (conns.hasOwnProperty(apiRoot) && conns[apiRoot].hasOwnProperty(collection)) {
         console.log('reusing connection', apiRoot, ':', collection, '...');
     } else {
-        console.log('creating new connection to', apiRoot, ' for collection ', collection, ' using ', config.connectionString + apiRoot, ' ...');
+        console.log('creating new connection to', apiRoot, ' for collection ', collection, ' using ', connectionString + apiRoot, ' ...');
         if(!conns.hasOwnProperty(apiRoot))
         {
             conns[apiRoot] = {};
         }
-        conns[apiRoot][collection] = mongoose.createConnection(config.connectionString + apiRoot);
+        conns[apiRoot][collection] = await mongoose.createConnection(connectionString + apiRoot);
     }
 
     if(models.hasOwnProperty(apiRoot) && models[apiRoot].hasOwnProperty(collection)) {
@@ -44,4 +44,11 @@ const modelFactory = (apiRoot, collection) => {
     return models[apiRoot][collection];
 }
 
-module.exports = modelFactory;
+const disconnectAll = async () => {
+    await mongoose.disconnect();
+}
+
+module.exports = {
+    buildTaxii2Models: buildTaxii2Models,
+    disconnectAll: disconnectAll
+}
