@@ -1,4 +1,10 @@
-const mongoose = require('mongoose');
+try {
+    var mongoose = require('mongoose');
+} catch (_) {
+    var prequire = require('parent-require'),
+        mongoose = prequire('mongoose');
+}
+
 const Schema = mongoose.Schema;
 const mongoosePaginate = require('mongoose-paginate');
 const mongooseAggregatePaginate = require('mongoose-aggregate-paginate-extend');

@@ -1,4 +1,9 @@
-const mongoose = require('mongoose');
+try {
+    var mongoose = require('mongoose');
+} catch (_) {
+    var prequire = require('parent-require'),
+        mongoose = prequire('mongoose');
+}
 const Schema = mongoose.Schema;
 const uuid = require('uuid');
 const mongoosePaginate = require('mongoose-paginate');
@@ -16,5 +21,7 @@ let collectionSchema = new Schema({
 });
 
 collectionSchema.plugin(mongoosePaginate);
+
+console.log("DEBUG - LOADING COLLECTION MODEL");
 
 module.exports = mongoose.model('Collection', collectionSchema);

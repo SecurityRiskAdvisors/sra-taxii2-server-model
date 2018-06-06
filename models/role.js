@@ -1,4 +1,9 @@
-const mongoose = require('mongoose');
+try {
+    var mongoose = require('mongoose');
+} catch (_) {
+    var prequire = require('parent-require'),
+        mongoose = prequire('mongoose');
+}
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
