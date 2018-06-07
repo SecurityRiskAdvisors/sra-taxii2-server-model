@@ -1,6 +1,6 @@
 {
   "name": "sra-taxii2-server-model",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "taxii 2.0 mongoose model for sra taxii2 ecosystem projects",
   "main": "model-factory.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "uuid": "^3.2.1"
   },
   "peerDependencies": {
-    "mongoose": "^5.1.2",
+    "mongoose": "^5.1.4",
     "mongoose-aggregate-paginate-extend": "github:thebleucheese/mongoose-aggregate-paginate-extend",
     "mongoose-paginate": "^5.0.3"
   }
