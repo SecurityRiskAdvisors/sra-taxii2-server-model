@@ -17,6 +17,7 @@ const objectSchema = new Schema({
     strict: false
 });
 
+objectSchema.index({id: 1, created: 1}, {unique: true});
 objectSchema.plugin(mongoosePaginate);
 objectSchema.plugin(mongooseAggregatePaginate);
 
