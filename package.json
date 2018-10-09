@@ -1,6 +1,6 @@
 {
   "name": "sra-taxii2-server-model",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "taxii 2.0 mongoose model for sra taxii2 ecosystem projects",
   "main": "model-factory.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "stix2",
     "stix"
   ],
-  "author": "Galen Fisher <galen.fisher@securityriskadvisors.com>",
+  "author": "thebleucheese",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model/issues"
