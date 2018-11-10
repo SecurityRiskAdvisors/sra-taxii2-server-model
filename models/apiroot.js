@@ -12,7 +12,7 @@ let ApiRootSchema = new Schema({
     contact: String,
     default: Boolean
 }, {
-    timestamps: true
+    timestamps: { createdAt: 'created', updatedAt: 'modified' }
 });
 
 module.exports = mongoose.model('ApiRoot', ApiRootSchema);

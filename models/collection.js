@@ -17,7 +17,7 @@ let collectionSchema = new Schema({
     media_types: [String],
     apiRoot: {type: Schema.Types.ObjectId, ref: 'ApiRoot'}
 }, {
-    timestamps: true
+    timestamps: { createdAt: 'created', updatedAt: 'modified' }
 });
 
 collectionSchema.plugin(mongoosePaginate);

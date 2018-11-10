@@ -15,7 +15,7 @@ let AccountSchema = new Schema({
     active: { type: Boolean, required: true, default: true },
     system: { type: Boolean }
 }, {
-    timestamps: true
+    timestamps: { createdAt: 'created', updatedAt: 'modified' }
 });
 
 AccountSchema.pre('save', function (next) {

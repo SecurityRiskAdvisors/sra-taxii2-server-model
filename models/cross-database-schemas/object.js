@@ -13,7 +13,7 @@ const objectSchema = new Schema({
     any: {} 
 }, { 
     id: false, 
-    timestamps: true,
+    timestamps: { createdAt: 'created', updatedAt: 'modified' },
     strict: false
 });
 

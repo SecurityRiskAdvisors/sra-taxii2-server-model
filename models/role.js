@@ -19,7 +19,7 @@ let RoleSchema = new Schema({
     writeCollections: [{type: String, ref: 'Collection'}],
     system: { type: Boolean }
 }, {
-    timestamps: true
+    timestamps: { createdAt: 'created', updatedAt: 'modified' }
 });
 
 module.exports = mongoose.model('Role', RoleSchema);
