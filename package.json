@@ -1,6 +1,6 @@
 {
   "name": "sra-taxii2-server-model",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "taxii 2.0 mongoose model for sra taxii2 ecosystem projects",
   "main": "model-factory.js",
   "scripts": {

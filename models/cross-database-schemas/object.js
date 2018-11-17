@@ -14,7 +14,8 @@ const objectSchema = new Schema({
 }, { 
     id: false, 
     timestamps: { createdAt: 'created', updatedAt: 'modified' },
-    strict: false
+    strict: false,
+    minimize: false
 });
 
 objectSchema.index({id: 1, created: 1});
