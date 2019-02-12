@@ -30,7 +30,7 @@
     "uuid": "^3.2.1"
   },
   "peerDependencies": {
-    "mongoose": "^5.1.4",
+    "mongoose": "^5.4.11",
     "mongoose-aggregate-paginate-extend": "github:thebleucheese/mongoose-aggregate-paginate-extend",
     "mongoose-paginate": "^5.0.3"
   }
