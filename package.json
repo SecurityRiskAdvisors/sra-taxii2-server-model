@@ -1,6 +1,6 @@
 {
   "name": "sra-taxii2-server-model",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "taxii 2.0 mongoose model for sra taxii2 ecosystem projects",
   "main": "model-factory.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model#readme",
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^3.0.0",
     "parent-require": "^1.0.0",
     "uuid": "^3.2.1"
   },
