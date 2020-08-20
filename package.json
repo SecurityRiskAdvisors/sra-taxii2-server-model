@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/SecurityRiskAdvisors/sra-taxii2-server-model#readme",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "parent-require": "^1.0.0",
     "uuid": "^3.2.1"
   },
